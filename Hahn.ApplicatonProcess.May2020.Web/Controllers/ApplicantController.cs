@@ -7,6 +7,8 @@ using Hahn.ApplicatonProcess.May2020.Domain;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Swashbuckle.AspNetCore.Annotations;
+using Swashbuckle.AspNetCore.Filters;
 
 namespace Hahn.ApplicatonProcess.May2020.Web.Controllers
 {
@@ -17,15 +19,20 @@ namespace Hahn.ApplicatonProcess.May2020.Web.Controllers
         private readonly ILogger<ApplicantController> _logger;
         private readonly IApplicantService service;
 
-        public ApplicantController(ILogger<ApplicantController> logger, IApplicantService service)
+        public ApplicantController(ILogger<ApplicantController> logger
+            , IApplicantService service)
         {
             _logger = logger;
             this.service = service;
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [SwaggerResponse(StatusCodes.Status200OK, "Gets the applicant",
+            typeof(Applicant))]
+        [SwaggerResponse(StatusCodes.Status404NotFound,
+            "The applicant for the specified ID is invalid (or) does not exist")]
+        [SwaggerResponseExample(StatusCodes.Status200OK
+            , typeof(ApplicantExample))]
         public IActionResult Get(int id)
         {
             try
@@ -40,10 +47,18 @@ namespace Hahn.ApplicatonProcess.May2020.Web.Controllers
         }
 
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status409Conflict)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [SwaggerResponse(StatusCodes.Status201Created,
+            "The resource is succesfully created. The Location attribute in" +
+            "the response header will have the URL to the resource")]
+
+        [SwaggerResponse(StatusCodes.Status400BadRequest, "The values in the " +
+           "input applicant are not valid. Please refer the applicant details" +
+            " for more details")]
+        [SwaggerResponse(StatusCodes.Status409Conflict, "The resource" +
+            "already exists.")]
+        [SwaggerResponse(StatusCodes.Status500InternalServerError, "Returned" +
+           " when there is an unusual error")]
+        [SwaggerRequestExample(typeof(Applicant), typeof(ApplicantExample))]
         //If the parsing of applicant fails, the method is not called
         public IActionResult Post([FromBody] Applicant applicant)
         {
@@ -74,6 +89,17 @@ namespace Hahn.ApplicatonProcess.May2020.Web.Controllers
         }
 
         [HttpPut]
+        [SwaggerResponse(StatusCodes.Status200OK, "Returned when the resource" +
+            "is succesfully updated")]
+        [SwaggerResponse(StatusCodes.Status404NotFound, "Returned when the " +
+           "resource that is attempted to update doesn't exist. The existance" +
+           " of the resouce is based on the ID attribute of the Applicant")]
+        [SwaggerResponse(StatusCodes.Status400BadRequest, "The values in the " +
+           "input applicant are not valid. Please refer the applicant details" +
+            " for more details")]
+        [SwaggerResponse(StatusCodes.Status500InternalServerError, "Returned" +
+           " when there is an unusual error")]
+        [SwaggerRequestExample(typeof(Applicant), typeof(ApplicantExample))]
         public IActionResult Put([FromBody] Applicant applicant)
         {
             try
@@ -102,6 +128,12 @@ namespace Hahn.ApplicatonProcess.May2020.Web.Controllers
         }
 
         [HttpDelete("{id}")]
+        [SwaggerResponse(StatusCodes.Status200OK, "The deletion is succesful")]
+        [SwaggerResponse(StatusCodes.Status404NotFound, "Returned when the " +
+           "resource that is attempted to delete does not exist. The existance" +
+           " of the resouce is based on the ID attribute of the Applicant")]
+        [SwaggerResponse(StatusCodes.Status500InternalServerError, "Returned" +
+           " when there is an unusual error")]
         public IActionResult Delete(int id)
         {
             try

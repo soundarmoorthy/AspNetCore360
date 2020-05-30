@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Hahn.ApplicatonProcess.May2020.Data;
 using Hahn.ApplicatonProcess.May2020.Domain;
 using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.Filters;
 
 namespace Hahn.ApplicatonProcess.May2020.Web
 {
@@ -38,11 +39,14 @@ namespace Hahn.ApplicatonProcess.May2020.Web
             {
                 ConfigureSwaggerGen(sw);
             });
-
+            services.AddSwaggerExamplesFromAssemblyOf<ApplicantExample>();
+            ;
         }
 
         private void ConfigureSwaggerGen(SwaggerGenOptions sw)
         {
+            sw.ExampleFilters();
+            sw.EnableAnnotations();
             sw.SwaggerDoc(version, new OpenApiInfo
             {
                 Title = title,
