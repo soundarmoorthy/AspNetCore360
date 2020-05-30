@@ -41,17 +41,6 @@ You need to have the folllowing installed.
 > .NET Core runtime 3.1 
 > .NET standard 2.0
 
-#### Testing
-A postman document is present in the root directory of the project that can be used to 
-test the endpoints. The filename is Hahn.postman_collection.json. You can import this document
-into postman and call the API's. 
-1. Call create API
-2. Call Get API
-3. call Update API
-4. Call Get API
-5. Call delete API
-6. Call Get API
-
 #### Bugs 
 1. Running the tests in parallel makes some of the tests fail because of Cocnurrency issues
 with InMemory database provider.
