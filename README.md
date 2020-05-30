@@ -1,12 +1,17 @@
 # Hahn
+Read requirements.md for deatils on the requirements.
 
-WIP (not complete): 
+#### Complete
+* Backend API's
+* Integration  tests
+* Unit tests
+
+#### WIP (not complete): 
 * Swagger documentation
 * Frontend
 * Logging
 
 
-Read requirements.md for deatils on the requirements.
 
 #### Building 
 
