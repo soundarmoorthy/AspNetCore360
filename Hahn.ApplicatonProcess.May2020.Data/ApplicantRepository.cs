@@ -32,7 +32,8 @@ namespace Hahn.ApplicatonProcess.May2020.Data
         {
             using (var db = new ApplicantContext())
             {
-                return db.Applicants.FirstOrDefault<Applicant>(x => x.ID == id);
+                return db.Applicants.
+                    FirstOrDefault<Applicant>(x => x.ID == id);
             }
         }
 

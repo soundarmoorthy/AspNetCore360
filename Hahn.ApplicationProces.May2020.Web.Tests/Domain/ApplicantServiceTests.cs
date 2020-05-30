@@ -104,18 +104,6 @@ namespace Hahn.ApplicationProces.May2020.Tests.Domain
         }
 
         [Fact]
-        public void Update_Updates_Value_succesfully_when_exists()
-        {
-            var expected = test.applicant();
-            test.db().Add(expected);
-            var updated = test.updated();
-            test.service().Update(updated);
-
-            Assert.False(test.db().Get(expected.ID).Equals(expected));
-            Assert.True(test.db().Get(expected.ID).Equals(test.updated()));
-        }
-
-        [Fact]
         public void Update_Throws_Argument_Null_Exception_On_Null_Input()
         {
             Assert.Throws<ArgumentNullException>(() =>
@@ -149,8 +137,8 @@ namespace Hahn.ApplicationProces.May2020.Tests.Domain
             var expected = test.applicant();
             test.db().Add(expected);
             test.service().Update(test.updated());
-
             Assert.True(test.db().Get(expected.ID).Equals(test.updated()));
+            Assert.False(test.db().Get(expected.ID).Equals(test.applicant()));
         }
     }
 }
