@@ -7,11 +7,9 @@ Read requirements.md for deatils on the requirements.
 * Unit tests
 
 #### WIP (not complete): 
-* Swagger documentation
 * Frontend
 * Logging
-
-
+* Enhance Swagger documentation
 
 #### Building 
 

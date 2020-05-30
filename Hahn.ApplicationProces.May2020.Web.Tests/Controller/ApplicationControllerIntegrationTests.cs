@@ -21,6 +21,7 @@ namespace Hahn.ApplicationProces.May2020.Web.Tests
     public class ApplicationControllerIntegrationTests :
         IClassFixture<WebApplicationFactory<Startup>>, IDisposable
     {
+        private const string RouteUrl = "/api/applicant";
         private readonly TestObjectFactory test;
         private readonly WebApplicationFactory<Startup> factory;
 
@@ -40,7 +41,7 @@ namespace Hahn.ApplicationProces.May2020.Web.Tests
 
 
         [Theory]
-        [InlineData("/api/v1/applicant")]
+        [InlineData(RouteUrl)]
         public async Task Post_Returns_201_And_URL_On_Succes(string url)
         {
             var expected = test.applicant();
@@ -56,7 +57,7 @@ namespace Hahn.ApplicationProces.May2020.Web.Tests
 
 
         [Theory]
-        [InlineData("/api/v1/applicant")]
+        [InlineData(RouteUrl)]
         public async Task Post_Returns_400_On_Validation_Failure(string url)
         {
             var content = test.request(test.invalidApplicant());
@@ -68,7 +69,7 @@ namespace Hahn.ApplicationProces.May2020.Web.Tests
 
 
         [Theory]
-        [InlineData("/api/v1/applicant")]
+        [InlineData(RouteUrl)]
         public async Task Post_Returns_409_When_Obj_Exists(string url)
         {
             var content = test.request(test.applicant());
@@ -79,7 +80,7 @@ namespace Hahn.ApplicationProces.May2020.Web.Tests
         }
 
         [Theory]
-        [InlineData("/api/v1/applicant")]
+        [InlineData(RouteUrl)]
         public async Task Post_Returns_400_When_Input_Is_Null(string url)
         {
             var applicant = test.request(null);
@@ -90,7 +91,7 @@ namespace Hahn.ApplicationProces.May2020.Web.Tests
         }
 
         [Theory]
-        [InlineData("/api/v1/applicant")]
+        [InlineData(RouteUrl)]
         public async Task Get_Returns_200_On_Success(string url)
         {
             var expected = test.applicant();
@@ -107,7 +108,7 @@ namespace Hahn.ApplicationProces.May2020.Web.Tests
         }
 
         [Theory]
-        [InlineData("/api/v1/applicant")]
+        [InlineData(RouteUrl)]
         public async Task Get_Returns_404_When_Obj_Doesnt_Exist(string url)
         {
             var expected = test.applicant();
@@ -120,7 +121,7 @@ namespace Hahn.ApplicationProces.May2020.Web.Tests
         }
 
         [Theory]
-        [InlineData("/api/v1/applicant")]
+        [InlineData(RouteUrl)]
         public async Task Put_Returns_400_When_Input_Is_Null(string url)
         {
             var content = test.request(null);
@@ -131,7 +132,7 @@ namespace Hahn.ApplicationProces.May2020.Web.Tests
         }
 
         [Theory]
-        [InlineData("/api/v1/applicant")]
+        [InlineData(RouteUrl)]
         public async Task Put_Returns_404_When_Obj_Doesnt_Exist(string url)
         {
             var expected = test.applicant();
@@ -144,7 +145,7 @@ namespace Hahn.ApplicationProces.May2020.Web.Tests
         }
 
         [Theory]
-        [InlineData("/api/v1/applicant")]
+        [InlineData(RouteUrl)]
         public async Task Put_Returns_400_When_Obj_Is_Invalid(string url)
         {
             var expected = test.applicant();
@@ -158,7 +159,7 @@ namespace Hahn.ApplicationProces.May2020.Web.Tests
         }
 
         [Theory]
-        [InlineData("/api/v1/applicant")]
+        [InlineData(RouteUrl)]
         public async Task Delete_Returns_409_When_Obj_Doesnt_Exist(string url)
         {
             var client = factory.CreateClient();
@@ -169,7 +170,7 @@ namespace Hahn.ApplicationProces.May2020.Web.Tests
         }
 
         [Theory]
-        [InlineData("/api/v1/applicant")]
+        [InlineData(RouteUrl)]
         public async Task Delete_Returns_200_On_Successful_Deletion(string url)
         {
             var expected = test.applicant();

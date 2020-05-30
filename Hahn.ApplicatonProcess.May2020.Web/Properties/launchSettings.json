@@ -9,22 +9,13 @@
     }
   },
   "profiles": {
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "launchUrl": "api/v1/applicant/swagger",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
     "Hahn.ApplicatonProcess.May2020.Web": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "/swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:5000;http://localhost:5000"
+      "applicationUrl": "https://localhost:5000;http://localhost;5000"
     }
   }
 }

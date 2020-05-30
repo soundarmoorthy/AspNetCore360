@@ -11,8 +11,7 @@ using Microsoft.Extensions.Logging;
 namespace Hahn.ApplicatonProcess.May2020.Web.Controllers
 {
     [ApiController]
-    [Route("api/v{version:apiVersion}/[controller]")]
-    [ApiVersion("1.0")]
+    [Route("api/[controller]")]
     public class ApplicantController : ControllerBase
     {
         private readonly ILogger<ApplicantController> _logger;

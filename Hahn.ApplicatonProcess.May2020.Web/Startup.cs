@@ -1,27 +1,20 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Hahn.ApplicatonProcess.May2020.Data;
-using Hahn.ApplicatonProcess.May2020.Domain;
+using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using Microsoft.Extensions.Configuration;
+using Hahn.ApplicatonProcess.May2020.Data;
+using Hahn.ApplicatonProcess.May2020.Domain;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Hahn.ApplicatonProcess.May2020.Web
 {
     public class Startup
     {
-        public static readonly Version ApiVersion = new Version("1.0");
+        public static readonly string version = "v1";
         private static readonly string title = "Hahn Applicant";
         public Startup(IConfiguration configuration)
         {
@@ -41,11 +34,6 @@ namespace Hahn.ApplicatonProcess.May2020.Web
             services.AddScoped<IApplicantRepository, ApplicantRepository>();
             services.AddScoped<IApplicantService, ApplicantService>();
 
-            services.AddApiVersioning(config =>
-            {
-                config.ReportApiVersions = true;
-            });
-
             services.AddSwaggerGen(sw =>
             {
                 ConfigureSwaggerGen(sw);
@@ -55,10 +43,10 @@ namespace Hahn.ApplicatonProcess.May2020.Web
 
         private void ConfigureSwaggerGen(SwaggerGenOptions sw)
         {
-            sw.SwaggerDoc($"v{Startup.ApiVersion.Major}", new OpenApiInfo
+            sw.SwaggerDoc(version, new OpenApiInfo
             {
                 Title = title,
-                Version = $"v{Startup.ApiVersion.Major}",
+                Version = version,
                 Contact = new OpenApiContact()
                 {
                     Name = "Soundar",
@@ -84,17 +72,14 @@ namespace Hahn.ApplicatonProcess.May2020.Web
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseHttpsRedirection();
-
             app.UseSwagger();
             app.UseSwaggerUI(sw =>
             {
                 sw.SwaggerEndpoint
-                ($"/swagger/v{Startup.ApiVersion.Major}/swagger.json",
+                ($"/swagger/{version}/swagger.json",
                 title);
             });
-
             app.UseRouting();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
