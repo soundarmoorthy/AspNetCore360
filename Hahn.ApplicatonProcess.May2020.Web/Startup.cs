@@ -22,6 +22,7 @@ namespace Hahn.ApplicatonProcess.May2020.Web
     public class Startup
     {
         public static readonly Version ApiVersion = new Version("1.0");
+        private static readonly string title = "Hahn Applicant";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -54,9 +55,9 @@ namespace Hahn.ApplicatonProcess.May2020.Web
 
         private void ConfigureSwaggerGen(SwaggerGenOptions sw)
         {
-            sw.SwaggerDoc(Startup.ApiVersion.ToString(), new OpenApiInfo
+            sw.SwaggerDoc($"v{Startup.ApiVersion.Major}", new OpenApiInfo
             {
-                Title = "Hahn Applicant",
+                Title = title,
                 Version = $"v{Startup.ApiVersion.Major}",
                 Contact = new OpenApiContact()
                 {
@@ -89,8 +90,9 @@ namespace Hahn.ApplicatonProcess.May2020.Web
             app.UseSwagger();
             app.UseSwaggerUI(sw =>
             {
-                sw.SwaggerEndpoint("/swagger/v1/swagger.json", "Hahn Applicant");
-                sw.RoutePrefix = string.Empty;
+                sw.SwaggerEndpoint
+                ($"/swagger/v{Startup.ApiVersion.Major}/swagger.json",
+                title);
             });
 
             app.UseRouting();
