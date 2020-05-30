@@ -5,11 +5,11 @@ Read requirements.md for deatils on the requirements.
 * Backend API's
 * Integration  tests
 * Unit tests
+* Swagger documentation
 
 #### WIP (not complete): 
 * Frontend
 * Logging
-* Enhance Swagger documentation
 
 #### Trying it out
 * Goto  the root folder of the application from the command line
