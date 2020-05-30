@@ -1,28 +1,73 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 using Hahn.ApplicatonProcess.May2020.Data;
 
 namespace Hahn.ApplicatonProcess.May2020.Domain
 {
     public sealed class ApplicantService : IApplicantService
     {
-        public void Create(Applicant applicant)
+        private readonly IApplicantValidator validator;
+        private readonly IApplicantRepository repo;
+        public ApplicantService(IApplicantValidator validator,
+            IApplicantRepository repo)
         {
-            throw new NotImplementedException();
+            this.validator = validator;
+            this.repo = repo;
         }
 
-        public bool Delete(int ID)
+        public void Create(Applicant applicant)
         {
-            throw new NotImplementedException();
+            if (applicant == null)
+                throw new ValidationFailedException
+                    (new[] { $"{nameof(applicant)} is null or empty" });
+
+            if (!validator.Validate(applicant, out IEnumerable<string> errors))
+                throw new ValidationFailedException(errors);
+
+            var present = repo.Get(applicant.ID) != null;
+
+            if (present)
+                throw new ApplicantAlreadyExistsException(applicant);
+
+            repo.Add(applicant);
+
+        }
+
+        public void Delete(int ID)
+        {
+            var applicant = repo.Get(ID);
+
+            if (applicant == null)
+                throw new ApplicantMissingExcpetion(ID);
+
+            repo.Remove(applicant);
         }
 
         public Applicant Get(int ID)
         {
-            throw new NotImplementedException();
+            var applicant = repo.Get(ID);
+
+            if (applicant == null)
+                throw new ApplicantMissingExcpetion(ID);
+
+            return applicant;
         }
 
-        public bool Update(int ID, Applicant applicant)
+        public void Update(Applicant dest)
         {
-            throw new NotImplementedException();
+            if (dest == null)
+                throw new ArgumentNullException(nameof(dest));
+
+            var source = repo.Get(dest.ID);
+
+            if (source == null)
+                throw new ApplicantMissingExcpetion(dest.ID);
+
+            if (!validator.Validate(dest, out IEnumerable<string> errors))
+                throw new ValidationFailedException(errors);
+
+            repo.Update(dest);
         }
     }
 }

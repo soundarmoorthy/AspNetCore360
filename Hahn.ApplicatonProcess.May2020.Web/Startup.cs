@@ -30,12 +30,11 @@ namespace Hahn.ApplicatonProcess.May2020.Web
         {
             services.AddControllers();
 
-            services.AddSingleton<IApplicantService, ApplicantService>();
-
-            services.AddDbContext<ApplicantContext>(options =>
-            {
-                options.UseInMemoryDatabase(nameof(Applicant));
-            });
+            services.AddDbContext<ApplicantContext>();
+            services.AddScoped<ApplicantContext>();
+            services.AddScoped<IApplicantValidator, ApplicantValidator>();
+            services.AddScoped<IApplicantRepository, ApplicantRepository>();
+            services.AddScoped<IApplicantService, ApplicantService>();
 
             services.AddApiVersioning(config =>
             {

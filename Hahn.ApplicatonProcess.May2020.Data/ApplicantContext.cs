@@ -6,13 +6,16 @@ namespace Hahn.ApplicatonProcess.May2020.Data
 {
     public class ApplicantContext : DbContext
     {
-        public ApplicantContext(DbContextOptions<ApplicantContext> options)
-            : base(options)
+        //By default we will use InMemoryDatabase, so we wiil
+        static DbContextOptions<ApplicantContext> options;
+        static ApplicantContext()
         {
+            var builder = new DbContextOptionsBuilder<ApplicantContext>();
+            builder.UseInMemoryDatabase(nameof(Applicant));
+            options = builder.Options;
         }
-
         public ApplicantContext()
-            : base()
+            : base(options)
         {
         }
 

@@ -18,14 +18,14 @@ namespace Hahn.ApplicatonProcess.May2020.Domain
         /// <param name="ID">A valid ID of an applicant to delete.</param>
         /// <returns>True if deleted successfully. False otherwise</returns>
         /// <remarks>Throws excpetion if the ID exists but was not deleted due to application error</remarks>
-        bool Delete(int ID);
+        void Delete(int ID);
 
         /// <summary>
         /// Updates an applicant with the given ID
         /// </summary>
         /// <param name="applicant"></param>
         /// <returns></returns>
-        bool Update(int ID, Applicant applicant);
+        void Update(Applicant applicant);
 
         /// <summary>
         /// Retrieves the applicant with the given ID.
