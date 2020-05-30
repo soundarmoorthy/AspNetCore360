@@ -11,6 +11,12 @@ Read requirements.md for deatils on the requirements.
 * Logging
 * Enhance Swagger documentation
 
+#### Trying it out
+* Goto  the root folder of the application from the command line
+* Run `dotnet build`
+* Run `dotnet ./Hahn.ApplicatonProcess.May2020.Web/bin/Debug/netcoreapp3.1/Hahn.ApplicatonProcess.May2020.Web.dll`
+* From the browser goto the URL `https://localhost:5000/swagger/index.html`
+* By default there are no data in the  database. It's cleaned up after every run.
 #### Building 
 
 * Clone and checkout master branch
