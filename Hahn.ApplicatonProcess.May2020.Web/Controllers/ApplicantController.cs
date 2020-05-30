@@ -6,6 +6,7 @@ using Hahn.ApplicatonProcess.May2020.Data;
 using Hahn.ApplicatonProcess.May2020.Domain;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Annotations;
 using Swashbuckle.AspNetCore.Filters;
@@ -33,6 +34,7 @@ namespace Hahn.ApplicatonProcess.May2020.Web.Controllers
             "The applicant for the specified ID is invalid (or) does not exist")]
         [SwaggerResponseExample(StatusCodes.Status200OK
             , typeof(ApplicantExample))]
+        [Produces("application/json", Type = typeof(Applicant))]
         public IActionResult Get(int id)
         {
             try
