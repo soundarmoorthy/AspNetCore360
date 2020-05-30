@@ -22,7 +22,6 @@ namespace Hahn.ApplicatonProcess.May2020.Web
     public class Startup
     {
         public static readonly Version ApiVersion = new Version("1.0");
-        public const ApiVersionStr = ApiVersion.ToString();
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;

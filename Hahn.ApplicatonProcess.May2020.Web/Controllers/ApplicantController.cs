@@ -12,7 +12,7 @@ namespace Hahn.ApplicatonProcess.May2020.Web.Controllers
 {
     [ApiController]
     [Route("api/v{version:apiVersion}/[controller]")]
-    [ApiVersion(Startup.ApiVersion.ToString())]
+    [ApiVersion("1.0")]
     public class ApplicantController : ControllerBase
     {
         private readonly ILogger<ApplicantController> _logger;

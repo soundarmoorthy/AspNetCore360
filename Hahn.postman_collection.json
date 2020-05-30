@@ -15,7 +15,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://localhost:5000/api/v1/applicant/100",
+					"raw": "https://localhost:5000/api/v1/applicant/1001",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -25,7 +25,7 @@
 						"api",
 						"v1",
 						"applicant",
-						"100"
+						"1001"
 					]
 				},
 				"description": "asdf"
@@ -36,13 +36,20 @@
 			"name": "Create",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\n  \"id\": 1001,\n  \"name\": \"Soundararajan\",\n  \"familyName\": \"Dhakshinamoorthy\",\n  \"address\": \"47, Jones Cassia, Karanai Main Road, Ottiyambakkam\",\n  \"countryOfOrigin\": \"Germany\",\n  \"eMailAdress\": \"soundararajan@outlook.com\",\n  \"age\": 35,\n  \"hired\": false\n}"
 				},
 				"url": {
-					"raw": "https://localhost:5000/api/v1/applicant/100",
+					"raw": "https://localhost:5000/api/v1/applicant",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -51,8 +58,7 @@
 					"path": [
 						"api",
 						"v1",
-						"applicant",
-						"100"
+						"applicant"
 					]
 				},
 				"description": "asdf"
@@ -73,10 +79,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": 100,\n  \"name\": \"Soundararajan\",\n  \"familyName\": \"Dhakshinamoorthy\",\n  \"address\": \"47, Jones Cassia, Karanai Main Road, Ottiyambakkam\",\n  \"countryOfOrigin\": \"India\",\n  \"eMailAdress\": \"soundararajan@outlook.com\",\n  \"age\": 35,\n  \"hired\": false\n}"
+					"raw": "{\n  \"id\": 1001,\n  \"name\": \"Archanaa\",\n  \"familyName\": \"Vedhamoorthy\",\n  \"address\": \"47, Jones Cassia, Karanai Main Road, Ottiyambakkam\",\n  \"countryOfOrigin\": \"India\",\n  \"eMailAdress\": \"archanaa@live.in\",\n  \"age\": 35,\n  \"hired\": false\n}"
 				},
 				"url": {
-					"raw": "https://localhost:5000/api/v1/applicant/100",
+					"raw": "https://localhost:5000/api/v1/applicant",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -85,8 +91,7 @@
 					"path": [
 						"api",
 						"v1",
-						"applicant",
-						"100"
+						"applicant"
 					]
 				},
 				"description": "asdf"
@@ -107,10 +112,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": 100,\n  \"name\": \"Soundararajan\",\n  \"familyName\": \"Dhakshinamoorthy\",\n  \"address\": \"47, Jones Cassia, Karanai Main Road, Ottiyambakkam\",\n  \"countryOfOrigin\": \"India\",\n  \"eMailAdress\": \"soundararajan@outlook.com\",\n  \"age\": 35,\n  \"hired\": false\n}"
+					"raw": ""
 				},
 				"url": {
-					"raw": "https://localhost:5000/api/v1/applicant/100",
+					"raw": "https://localhost:5000/api/v1/applicant/1001",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -120,7 +125,7 @@
 						"api",
 						"v1",
 						"applicant",
-						"100"
+						"1001"
 					]
 				},
 				"description": "asdf"
