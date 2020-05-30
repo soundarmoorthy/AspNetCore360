@@ -1,3 +1,6 @@
+![.NET Core](https://github.com/soundarmoorthy/Hahn/workflows/.NET%20Core/badge.svg?branch=master&event=status)
+
+
 # Hahn
 Read requirements.md for deatils on the requirements.
 
