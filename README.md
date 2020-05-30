@@ -1,5 +1,4 @@
-![Hahn](https://github.com/soundarmoorthy/Hahn/workflows/Hahn/badge.svg?branch=master&event=status)
-
+![Build](https://github.com/soundarmoorthy/Hahn/workflows/Build/badge.svg?branch=master&event=status)
 
 # Hahn
 Read requirements.md for deatils on the requirements.
