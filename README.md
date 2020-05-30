@@ -1,4 +1,4 @@
-![.NET Core](https://github.com/soundarmoorthy/Hahn/workflows/.NET%20Core/badge.svg?branch=master&event=status)
+![Hahn](https://github.com/soundarmoorthy/Hahn/workflows/Hahn/badge.svg?branch=master&event=status)
 
 
 # Hahn
