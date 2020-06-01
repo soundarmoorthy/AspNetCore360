@@ -49,3 +49,4 @@ with InMemory database provider.
 
 2. The UrlHelper.ActionLink api fails in .NET core 3.1 and when a resource is created the 
 url for it is composed manually.
+# stackoverflow.examples
