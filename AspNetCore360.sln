@@ -1,13 +1,13 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "Hahn.ApplicatonProcess.May2020.Web\API.csproj", "{98B8E407-F4A8-464C-BB71-7F5610AD3F56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "Web\API.csproj", "{98B8E407-F4A8-464C-BB71-7F5610AD3F56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Hahn.ApplicatonProcess.May2020.Data\Data.csproj", "{EA7E1D77-6C93-4655-93D2-E93A9425D63E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{EA7E1D77-6C93-4655-93D2-E93A9425D63E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Hahn.ApplicatonProcess.May2020.Domain\Domain.csproj", "{932264AE-1861-465A-8478-F05D85C226C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{932264AE-1861-465A-8478-F05D85C226C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Hahn.ApplicationProces.May2020.Web.Tests\Tests.csproj", "{F47785F9-FAA2-49C5-A349-88B78ABFA89A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{F47785F9-FAA2-49C5-A349-88B78ABFA89A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
