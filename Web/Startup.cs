@@ -19,7 +19,7 @@ namespace Api
     public class Startup
     {
         public static readonly string version = "v1";
-        private static readonly string title = "Hahn Applicant";
+        private static readonly string title = "ASP .NET Core 360 Application";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -66,9 +66,6 @@ namespace Api
                     Url = new Uri("http://apache.org/licenses/LICENSE-2.0.html")
                 }
             });
-            var docXml = Path.Combine(System.AppContext.BaseDirectory,
-                        "Hahn.ApplicatonProcess.May2020.Web.xml");
-            sw.IncludeXmlComments(docXml);
         }
 
         // This method gets called by the runtime. 
