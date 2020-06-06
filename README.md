@@ -1,16 +1,13 @@
 ![Build](https://github.com/soundarmoorthy/Hahn/workflows/Build/badge.svg?branch=master&event=status)
 
-# Hahn
-Read requirements.md for deatils on the requirements.
+# AspNetCore360
+Read requirements.md for deatils on the requirements. This is a basic .NET Core app did for training purposes  based on an interview question from internet.
 
 #### Complete
 * Backend API's
 * Integration  tests
 * Unit tests
 * Swagger documentation
-
-#### WIP (not complete): 
-* Frontend
 * Logging
 
 #### Trying it out
@@ -19,14 +16,13 @@ Read requirements.md for deatils on the requirements.
 * Run `dotnet ./Hahn.ApplicatonProcess.May2020.Web/bin/Debug/netcoreapp3.1/Hahn.ApplicatonProcess.May2020.Web.dll`
 * From the browser goto the URL `https://localhost:5000/swagger/index.html`
 * By default there are no data in the  database. It's cleaned up after every run.
-#### Building 
 
+#### Building 
 * Clone and checkout master branch
 * From command line run `dotnet build`
 
 
 #### Running tests
-
 * From command line run `dotnet test` from the root directory. 
 * To see the coverage numbers run `dotnet test /p:CollectCoverage=true` from the root directory
 
