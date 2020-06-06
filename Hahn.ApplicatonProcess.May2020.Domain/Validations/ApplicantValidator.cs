@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
+using Data;
+using System;
 using System.Linq;
+using Data.Validations;
 using FluentValidation;
+using System.Collections.Generic;
 using FluentValidation.Validators;
-using Hahn.ApplicatonProcess.May2020.Data;
 
-namespace Hahn.ApplicatonProcess.May2020.Domain
+namespace Domain.Validations
 {
     public class ApplicantValidator : AbstractValidator<Applicant>,
         IApplicantValidator

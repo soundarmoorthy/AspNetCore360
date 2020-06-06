@@ -1,7 +1,4 @@
-﻿using System;
-using Hahn.ApplicatonProcess.May2020.Data;
-
-namespace Hahn.ApplicatonProcess.May2020.Data
+﻿namespace Data
 {
     public interface IApplicantRepository
     {

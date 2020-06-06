@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using Swashbuckle.AspNetCore.Annotations;
+﻿using Swashbuckle.AspNetCore.Annotations;
 
-namespace Hahn.ApplicatonProcess.May2020.Data
+namespace Data
 {
     public sealed class Applicant
     {

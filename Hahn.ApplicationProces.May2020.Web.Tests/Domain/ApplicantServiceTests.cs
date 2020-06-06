@@ -1,9 +1,9 @@
-using System;
-using Hahn.ApplicatonProcess.May2020.Domain;
-
 using Xunit;
+using Domain;
+using System;
+using Data.Validations;
 
-namespace Hahn.ApplicationProces.May2020.Tests.Domain
+namespace Tests.Domain
 {
     public class ApplicantServiceTests : IDisposable
     {

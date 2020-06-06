@@ -1,15 +1,17 @@
-﻿using System;
-using System.Net.Http;
-using System.Net.Http.Headers;
+﻿using Data;
+using Domain;
+using System;
 using System.Text;
+using Api.Controllers;
+using System.Net.Http;
 using System.Text.Json;
-using Hahn.ApplicatonProcess.May2020.Data;
-using Hahn.ApplicatonProcess.May2020.Domain;
-using Hahn.ApplicatonProcess.May2020.Web.Controllers;
+using Data.Validations;
+using Domain.Validations;
+using System.Net.Http.Headers;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 
-namespace Hahn.ApplicationProces.May2020.Tests
+namespace Tests
 {
     internal class TestObjectFactory : IDisposable
     {

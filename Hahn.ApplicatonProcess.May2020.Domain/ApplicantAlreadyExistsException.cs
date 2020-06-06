@@ -1,7 +1,7 @@
-﻿using System;
-using Hahn.ApplicatonProcess.May2020.Data;
+﻿using Data;
+using System;
 
-namespace Hahn.ApplicatonProcess.May2020.Domain
+namespace Domain
 {
     public sealed class ApplicantAlreadyExistsException : Exception
     {

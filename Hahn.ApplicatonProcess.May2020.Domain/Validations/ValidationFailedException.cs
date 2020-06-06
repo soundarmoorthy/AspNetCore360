@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Hahn.ApplicatonProcess.May2020.Domain
+namespace Data.Validations
 {
     public sealed class ValidationFailedException : Exception
     {

@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using RestSharp;
 using FluentValidation;
-using RestSharp;
 
 
-namespace Hahn.ApplicatonProcess.May2020.Domain
+namespace Data.Validations
 {
     public static class CountryValidator
     {

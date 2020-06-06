@@ -1,8 +1,7 @@
-﻿using System;
-using Hahn.ApplicatonProcess.May2020.Data;
+﻿using Data;
 using Swashbuckle.AspNetCore.Filters;
 
-namespace Hahn.ApplicatonProcess.May2020.Web
+namespace Api.Documentation
 {
     public class ApplicantExample : IExamplesProvider<Applicant>
     {

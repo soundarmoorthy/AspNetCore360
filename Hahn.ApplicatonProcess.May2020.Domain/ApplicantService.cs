@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
+﻿using Data;
+using System;
+using Data.Validations;
 using System.Collections.Generic;
-using Hahn.ApplicatonProcess.May2020.Data;
 
-namespace Hahn.ApplicatonProcess.May2020.Domain
+namespace Domain
 {
     public sealed class ApplicantService : IApplicantService
     {

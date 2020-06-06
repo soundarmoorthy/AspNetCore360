@@ -1,7 +1,6 @@
-﻿using System;
-using Hahn.ApplicatonProcess.May2020.Data;
+﻿using Data;
 
-namespace Hahn.ApplicatonProcess.May2020.Domain
+namespace Domain
 {
     public interface IApplicantService
     {

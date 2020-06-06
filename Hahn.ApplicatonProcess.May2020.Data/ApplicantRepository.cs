@@ -1,8 +1,6 @@
-﻿using System;
-using System.Linq;
-using Hahn.ApplicatonProcess.May2020.Data;
+﻿using System.Linq;
 
-namespace Hahn.ApplicatonProcess.May2020.Data
+namespace Data
 {
     public sealed class ApplicantRepository : IApplicantRepository
     {

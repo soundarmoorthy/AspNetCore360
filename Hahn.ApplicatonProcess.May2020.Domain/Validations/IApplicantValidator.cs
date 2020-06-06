@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using Hahn.ApplicatonProcess.May2020.Data;
+﻿using System.Collections.Generic;
 
-namespace Hahn.ApplicatonProcess.May2020.Domain
+namespace Data.Validations
 {
     public interface IApplicantValidator
     {

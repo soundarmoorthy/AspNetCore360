@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Hahn.ApplicatonProcess.May2020.Domain
+namespace Domain
 {
     public class ApplicantMissingExcpetion : Exception
     {

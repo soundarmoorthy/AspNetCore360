@@ -1,9 +1,8 @@
-﻿using System;
-using System.Linq;
+﻿using Xunit;
+using System;
 using System.Collections.Generic;
-using Xunit;
 
-namespace Hahn.ApplicationProces.May2020.Tests.Domain
+namespace Tests.Domain
 {
     public class ValidatorTests : IDisposable
     {

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
-namespace Hahn.ApplicatonProcess.May2020.Data
+namespace Data
 {
     public class ApplicantContext : DbContext
     {

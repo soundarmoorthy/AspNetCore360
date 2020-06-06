@@ -1,17 +1,20 @@
+using Data;
+using Domain;
 using System;
 using System.IO;
+using Data.Validations;
+using Api.Documentation;
+using Domain.Validations;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using Swashbuckle.AspNetCore.Filters;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Microsoft.Extensions.Configuration;
-using Hahn.ApplicatonProcess.May2020.Data;
-using Hahn.ApplicatonProcess.May2020.Domain;
 using Microsoft.Extensions.DependencyInjection;
-using Swashbuckle.AspNetCore.Filters;
 
-namespace Hahn.ApplicatonProcess.May2020.Web
+namespace Api
 {
     public class Startup
     {

@@ -1,22 +1,11 @@
+using Api;
+using Xunit;
 using System;
 using System.Net;
-using System.Net.Http;
-using System.Text.Json;
 using System.Threading.Tasks;
-using Hahn.ApplicationProces.May2020.Tests;
-using Hahn.ApplicatonProcess.May2020.Data;
-using Hahn.ApplicatonProcess.May2020.Domain;
-using Hahn.ApplicatonProcess.May2020.Web;
-using Hahn.ApplicatonProcess.May2020.Web.Controllers;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
-using Xunit;
 
-namespace Hahn.ApplicationProces.May2020.Web.Tests
+namespace Tests.Controller
 {
     public class ApplicationControllerIntegrationTests :
         IClassFixture<WebApplicationFactory<Startup>>, IDisposable

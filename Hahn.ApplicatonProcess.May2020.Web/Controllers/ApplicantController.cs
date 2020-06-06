@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Hahn.ApplicatonProcess.May2020.Data;
-using Hahn.ApplicatonProcess.May2020.Domain;
-using Microsoft.AspNetCore.Http;
+﻿using Data;
+using Domain;
+using System;
+using Data.Validations;
+using Api.Documentation;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Swashbuckle.AspNetCore.Annotations;
 using Swashbuckle.AspNetCore.Filters;
+using Swashbuckle.AspNetCore.Annotations;
 
-namespace Hahn.ApplicatonProcess.May2020.Web.Controllers
+namespace Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
