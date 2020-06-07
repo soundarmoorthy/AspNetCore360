@@ -1,7 +1,6 @@
 using Data;
 using Domain;
 using System;
-using System.IO;
 using Data.Validations;
 using Api.Documentation;
 using Domain.Validations;
