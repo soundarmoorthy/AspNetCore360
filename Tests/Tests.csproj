@@ -23,6 +23,7 @@
     <ItemGroup>
         <Folder Include="Controller\" />
         <Folder Include="Domain\" />
+        <Folder Include="Example\" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Domain\Domain.csproj">

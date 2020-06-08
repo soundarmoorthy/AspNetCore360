@@ -72,9 +72,9 @@ namespace Tests.Controller
         [InlineData(RouteUrl)]
         public async Task Post_Returns_400_When_Input_Is_Null(string url)
         {
-            var applicant = test.request(null);
+            var applicant = new object();
             var client = factory.CreateClient();
-            var response = await client.PostAsync(url, applicant);
+            var response = await client.PostAsync(url, (Applicant)applicant);
 
             Assert.True(response.StatusCode == HttpStatusCode.BadRequest);
         }
