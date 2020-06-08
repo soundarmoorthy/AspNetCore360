@@ -153,19 +153,12 @@ namespace Api.Controllers
         }
 
         private string ComposeUrl(int id)
-        {
-            //TODO:
-            //The Url.RouteUrl is not working and spent some time firguring it
-            //out and left it. https://github.com/dotnet/aspnetcore/issues/14877
-            //This fails in both Integration testing and production. For now
-            //composing the URL from hand. Possible issues might be versioning
-            //localization if added. 
-            if (this.Request == null)
-                return
-                    $"https://{Environment.MachineName}/{nameof(Applicant)}/{id}";
-            else
-                return
-                    $"https://{Request.Host.Value}{Request.Path}/{id}";
-        }
+                    //TODO:
+                    //The Url.RouteUrl is not working and spent some time firguring it
+                    //out and left it. https://github.com/dotnet/aspnetcore/issues/14877
+                    //This fails in both Integration testing and production. For now
+                    //composing the URL from hand. Possible issues might be versioning
+                    //localization if added. 
+                    => $"https://{Request.Host.Value}{Request.Path}/{id}";
     }
 }
