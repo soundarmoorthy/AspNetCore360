@@ -11,7 +11,7 @@ Read requirements.md for deatils on the requirements. This is a basic .NET Core 
 #### Trying it out
 * Goto  the root folder of the application from the command line
 * Run `dotnet build`
-* Run `dotnet <path to web project bin folder>/Hahn.ApplicatonProcess.May2020.Web.dll`
+* Run `dotnet Web/bin/Debug/netcoreapp3.1/Web.dll` . The Dll name might be different, so please check it. 
 * From the browser goto the URL `https://localhost:5000/swagger/index.html`
 * By default there are no data in the  database. It's cleaned up after every run.
 
