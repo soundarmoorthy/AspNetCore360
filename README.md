@@ -3,17 +3,15 @@
 # AspNetCore360
 Read requirements.md for deatils on the requirements. This is a basic .NET Core app did for training purposes  based on an interview question from internet.
 
-#### Complete
-* Backend API's
-* Integration  tests
-* Unit tests
-* Swagger documentation
-* Logging
+#### Requiremets 
+* Visual studio 2019 for Mac
+* Dot Net Core 360
+* 
 
 #### Trying it out
 * Goto  the root folder of the application from the command line
 * Run `dotnet build`
-* Run `dotnet ./Hahn.ApplicatonProcess.May2020.Web/bin/Debug/netcoreapp3.1/Hahn.ApplicatonProcess.May2020.Web.dll`
+* Run `dotnet <path to web project bin folder>/Hahn.ApplicatonProcess.May2020.Web.dll`
 * From the browser goto the URL `https://localhost:5000/swagger/index.html`
 * By default there are no data in the  database. It's cleaned up after every run.
 
