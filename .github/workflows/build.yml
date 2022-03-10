@@ -19,7 +19,7 @@ jobs:
       - name: Goto project folder
         run: cd /home/runner/work/AspNetCore360/AspNetCore360
       - name: Install dependencies
-        run: dotnet restore AspNetCore360.sln
+        run: dotnet restore -v d
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Test
