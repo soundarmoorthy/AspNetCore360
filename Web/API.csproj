@@ -25,7 +25,4 @@
             </GlobalPropertiesToRemove>
         </ProjectReference>
     </ItemGroup>
-    <ItemGroup>
-      <Compile Remove="Test.cs" />
-    </ItemGroup>
 </Project>
