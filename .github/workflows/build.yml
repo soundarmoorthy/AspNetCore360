@@ -18,9 +18,7 @@ jobs:
           dotnet-version: ${{ matrix.dotnet-version }}
       - name: Goto project folder
         run: cd /home/runner/work/AspNetCore360/AspNetCore360
-      - name: Install dependencies
-        run: dotnet restore -v d
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build --configuration Debug
       - name: Test
         run: dotnet test --no-restore --verbosity normal
