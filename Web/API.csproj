@@ -9,8 +9,9 @@
       <ExternalConsole>true</ExternalConsole>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="5.1.1" />
-        <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="7.0.2" />
+        <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.3.0" />
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Documentation\" />
@@ -24,5 +25,8 @@
             <GlobalPropertiesToRemove>
             </GlobalPropertiesToRemove>
         </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+      <None Remove="Swashbuckle.AspNetCore.SwaggerUI" />
     </ItemGroup>
 </Project>
