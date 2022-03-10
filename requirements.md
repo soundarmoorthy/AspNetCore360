@@ -77,6 +77,3 @@ For all strings you use, use localization and a Jsonfile as resource file.
 
 #### Persistence
 To save the data use entityframework core 3.1 and entityframework in memory database.
-
-#### Final note  
-If you have any questions – do not hesitate to ask. A Task like this is our daily business.
