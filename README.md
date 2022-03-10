@@ -1,17 +1,16 @@
 [![Build](https://github.com/soundarmoorthy/AspNetCore360/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/soundarmoorthy/AspNetCore360/actions/workflows/build.yml)
 
 # AspNetCore360
-Read requirements.md for deatils on the requirements. This is a basic .NET Core app did for training purposes  based on an interview question from internet.
+Read requirements.md for deatils on the requirements. This is a basic .NET Core app with boilerplate for API, Swagger, Logging, Validation, Dependency Injection, HTTPS, github actions. 
 
 #### Requiremets 
 * Visual studio 2019 for Mac
-* Dot Net Core 360
-* 
+* Dot Net core 5.0
 
 #### Trying it out
 * Goto  the root folder of the application from the command line
 * Run `dotnet build`
-* Run `dotnet Web/bin/Debug/netcoreapp3.1/Web.dll` . The Dll name might be different, so please check it. 
+* Run `dotnet Web/bin/Debug/netcoreapp3.1/Api.dll` . The Dll name might be different, so please check it. 
 * From the browser goto the URL `https://localhost:5000/swagger/index.html`
 * By default there are no data in the  database. It's cleaned up after every run.
 
@@ -34,8 +33,8 @@ This code was built on Microsoft Visual Studio for Mac 2019. This doesn't have a
 dependencies. This should work with Visual Studio 2019 for Windows as well.
 
 You need to have the folllowing installed. 
-> .NET Core runtime 3.1 
-> .NET standard 2.0
+> .NET Core runtime 5.0
+> .NET standard 2.1
 
 #### Bugs 
 1. Running the tests in parallel makes some of the tests fail because of Cocnurrency issues
@@ -43,4 +42,3 @@ with InMemory database provider.
 
 2. The UrlHelper.ActionLink api fails in .NET core 3.1 and when a resource is created the 
 url for it is composed manually.
-# stackoverflow.examples
