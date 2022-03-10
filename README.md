@@ -7,6 +7,14 @@ Read requirements.md for deatils on the requirements. This is a basic .NET Core 
 * Visual studio 2019 for Mac
 * Dot Net core 5.0
 
+#### Authentication
+* The application uses twitter authentication. So if you don't have a twitter API Key and Secret, please get one from https://dev.twitter.com.
+* From command line set the api key and secret in the secrets manager storage in local machine
+  * `cd <root project directory>`
+  * `dotnet user-secrets init --project Web/API.csproj`
+  * `dotnet user-secrets set "Twitter:ApiKey" "<twitterapikey>" --project Web/API.csproj` 
+  * `dotnet user-secrets set "Twitter:ApiKeySecret" "<twitterapisecret>" --project Web/API.csproj`
+
 #### Trying it out
 * Goto  the root folder of the application from the command line
 * Run `dotnet build`
