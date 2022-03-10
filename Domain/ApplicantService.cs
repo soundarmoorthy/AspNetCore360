@@ -2,6 +2,7 @@
 using System;
 using Data.Validations;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace Domain
 {
