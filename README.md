@@ -1,4 +1,4 @@
-![Build](https://github.com/soundarmoorthy/Hahn/workflows/Build/badge.svg?branch=master&event=status)
+[![Build](https://github.com/soundarmoorthy/AspNetCore360/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/soundarmoorthy/AspNetCore360/actions/workflows/build.yml)
 
 # AspNetCore360
 Read requirements.md for deatils on the requirements. This is a basic .NET Core app did for training purposes  based on an interview question from internet.
