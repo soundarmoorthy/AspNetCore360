@@ -1,12 +1,3 @@
-####  Visual studio project setup 
-> SolutionName
-Hahn.ApplicatonProcess.Application  
-  
->Projects:  
-Hahn.ApplicatonProcess.May2020.Data - .NetStandard 2.1 Class Library  
-Hahn.ApplicatonProcess.May2020.Web- .NetCore 3.1 Kestrel Host  
-Hahn.ApplicatonProcess.May2020.Domain – .NetStandard 2.1 Class Library Containing Business Logic and Models  
-  
 #### Requirement Summary
 We want you to build a Web Solution with RestEndpoints, as well as an User interface / Form to apply Data. Therefore you will have to separate the business logic, the data / persistence layer and the web project. The Api should have the following actions:  
   
