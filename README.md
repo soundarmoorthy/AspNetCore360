@@ -8,7 +8,7 @@ Read requirements.md for deatils on the requirements. This is a basic .NET Core 
 * Dot Net core 5.0
 
 #### Authentication
-* The application uses twitter authentication. So if you don't have a twitter API Key and Secret, please get one from https://dev.twitter.com.
+* The application uses twitter authentication. So if you don't have a twitter API Key and Secret, please get one. [Follow this](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/social/twitter-logins?view=aspnetcore-6.0)
 * From command line set the api key and secret in the secrets manager storage in local machine
   * `cd <root project directory>`
   * `dotnet user-secrets init --project Web/API.csproj`
