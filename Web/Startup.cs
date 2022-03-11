@@ -12,6 +12,10 @@ using Swashbuckle.AspNetCore.Filters;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using AspNetCore.Authentication.ApiKey;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace Api
 {
@@ -29,6 +33,7 @@ namespace Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var user = GetUserMetadata();
             services.AddControllers();
 
             services.AddDbContext<ApplicantContext>();
@@ -37,12 +42,41 @@ namespace Api
             services.AddScoped<IApplicantRepository, ApplicantRepository>();
             services.AddScoped<IApplicantService, ApplicantService>();
 
+            //services.AddAuthentication(ApiKeyDefaults.AuthenticationScheme)
+            //.AddApiKeyInHeaderOrQueryParams(options =>
+            //{
+            //    options.Realm = Configuration["NetCore360:ApiKey"];
+            //    options.KeyName = "X-API-KEY";
+            //});
+
+            //services.AddAuthorization(options =>
+            //{
+            //    options.FallbackPolicy = new AuthorizationPolicyBuilder()
+            //        .RequireAuthenticatedUser()
+            //        .Build();
+            //});
             services.AddSwaggerGen(sw =>
             {
                 ConfigureSwaggerGen(sw);
             });
             services.AddSwaggerExamplesFromAssemblyOf<ApplicantExample>();
-            ;
+        }
+
+        private class UserMetadata
+        {
+            public string Owner {get;set;}
+            public string ApiKey {get;set;}
+            public string Issuer {get;set;}
+        }
+
+        private UserMetadata GetUserMetadata()
+        {
+            return new UserMetadata()
+            {
+                Owner = Configuration["NetCore360:ApiKeyDefaultOwner"],
+                ApiKey = Configuration["NetCore360:ApiKey"],
+                Issuer = "Localhost-AspNetCore360"
+            };
         }
 
         private void ConfigureSwaggerGen(SwaggerGenOptions sw)
@@ -84,6 +118,7 @@ namespace Api
                 title);
             });
             app.UseRouting();
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
