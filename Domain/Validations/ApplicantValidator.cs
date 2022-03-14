@@ -21,9 +21,6 @@ namespace Domain.Validations
             RuleFor(x => x.Hired).NotNull();
             RuleFor(x => x.EMailAdress).
                 EmailAddress(EmailValidationMode.AspNetCoreCompatible);
-
-            //RuleFor(x => x.CountryOfOrigin).IsValidCountry()
-               // .WithMessage("The country name is invalid");
         }
 
         public bool Validate(Applicant applicant,

@@ -4,8 +4,8 @@
 Read requirements.md for deatils on the requirements. This is a basic .NET Core app with boilerplate for API, Swagger, Logging, Validation, Dependency Injection, HTTPS, github actions. 
 
 #### Requiremets 
-* Visual studio 2019 for Mac
-* Dot Net core 5.0
+* Visual studio 2022 for Mac
+* Dot Net core 6.0
 
 #### Authentication
 * The application uses twitter authentication. So if you don't have a twitter API Key and Secret, please get one. [Follow this](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/social/twitter-logins?view=aspnetcore-6.0)
