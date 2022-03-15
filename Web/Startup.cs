@@ -22,7 +22,7 @@ namespace Api
     public class Startup
     {
         public static readonly string version = "v1";
-        private static readonly string title = "ASP .NET Core 360 Application";
+        private static readonly string title = "ASP .NET Core 360";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -64,9 +64,9 @@ namespace Api
 
         private class UserMetadata
         {
-            public string Owner {get;set;}
-            public string ApiKey {get;set;}
-            public string Issuer {get;set;}
+            public string Owner { get; set; }
+            public string ApiKey { get; set; }
+            public string Issuer { get; set; }
         }
 
         private UserMetadata GetUserMetadata()

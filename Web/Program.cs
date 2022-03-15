@@ -18,7 +18,8 @@ namespace Api
 
             try
             {
-                CreateHostBuilder(args).Build().Run();
+                var builder = CreateHostBuilder(args).Build();
+                builder.Run();
             }
             catch (Exception ex)
             {
